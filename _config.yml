@@ -1,0 +1,9 @@
+name: Juliane Albuquerque
+author: Juliane Albuquerque
+timezone: America/Sao_Paulo
+
+exclude: ["README.md", ".gitignore"]
+markdown: redcarpet
+pygments: true
+
+permalink: /:title
