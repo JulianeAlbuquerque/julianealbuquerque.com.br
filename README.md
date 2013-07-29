@@ -19,7 +19,7 @@ Agora clone o projeto:
 
 Depois vá para pasta do projeto:
 
-	cd julianealbuquerque
+	cd julianealbuquerque.com.br
 
 E finalmente rode:
 
