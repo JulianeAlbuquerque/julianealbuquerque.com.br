@@ -1,0 +1,5 @@
+User-agent: *
+
+Sitemap: http://julianealbuquerque.com.br/sitemap.xml
+
+Disallow: ?replytocom
