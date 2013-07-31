@@ -15,6 +15,56 @@
 	background-color: #FFF;
 }
 
+.logo {
+	display: inline-block;
+	width: em(28px);
+	vertical-align: top;
+}
+
+.nameLogo {
+	display: inline-block;
+	margin-left: 10px;
+	width: 250px;
+	font-size: em(24px);
+	color: $smoothColor;
+	@include transition(all, 0.3s, ease-in-out)
+}
+
+.navbar {
+
+}
+
+.navbar ul {
+	
+}
+
+.navbar ul li {
+	
+}
+
+.navbar ul li a {
+	
+}
+
+@media screen and (min-width:550px) {
+	.nameLogo {
+		margin-top: 9px;
+		width: 300px;
+		font-size: em(32px);
+	}
+}
+
+@media screen and (min-width:800px) {
+	.nameLogo {
+		font-size: em(40px);
+	}
+
+	.logo {
+		width: em(43px);
+		@include transition(all, 0.3s, ease-in-out)
+	}
+}
+
 @media screen and (max-width:1000px) {
 	.header {
 		padding: em(10px) em(8px) 0;

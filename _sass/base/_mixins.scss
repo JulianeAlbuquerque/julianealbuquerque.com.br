@@ -5,22 +5,10 @@
 					border-radius: $radius;
 }
 
-@mixin inline-block {
-	display: inline-block;
-	*display: inline;
-	zoom: 1;
-}
-
 @mixin box-shadow($color, $hoffset, $voffset, $blur) {
   -webkit-box-shadow: $color $hoffset $voffset $blur;
   	 -moz-box-shadow: $color $hoffset $voffset $blur;
   				box-shadow: $color $hoffset $voffset $blur;
-}
-
-@mixin box-shadow-none {
-  -webkit-box-shadow: none;
-  	 -moz-box-shadow: none;
-  				box-shadow: none;
 }
 
 @mixin font-size-mini {
@@ -41,6 +29,17 @@
 
 @mixin font-size-x-large {
 	font-size: $fontSizeXLarge;
+}
+
+// transition
+@mixin transition($property, $duration, $ms: false) {
+	-webkit-transition: $property $duration ease-in-out;
+		 -moz-transition: $property $duration ease-in-out;
+			 -o-transition: $property $duration ease-in-out;
+	@if ($ms) {
+		-ms-transition: $property $duration ease-in-out;
+	}
+	transition: $property $duration ease-in-out;
 }
 
 // returns unitless number
