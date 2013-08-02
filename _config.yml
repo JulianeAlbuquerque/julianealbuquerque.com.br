@@ -6,6 +6,6 @@ exclude: ["README.md", "Makefile", ".gitignore"]
 pygments: true
 permalink: /:title
 url: http://julianealbuquerque.com.br
-baseurl: /julianealbuquerque.com.br
+baseurl: /
 lsi: false
 dev: false
