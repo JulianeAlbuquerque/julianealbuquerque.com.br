@@ -125,6 +125,13 @@
 	color: $bodyColor;
 }
 
+.article__code {
+  display: inline-block;
+  background-color: #FFC;
+  @include font-anonymous;
+  padding: 0 em(5px);
+}
+
 @media screen and (min-width:550px) {
 	.article-list__item {
 		padding: em(20px);

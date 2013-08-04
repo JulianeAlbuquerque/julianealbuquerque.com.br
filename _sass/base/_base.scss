@@ -19,10 +19,6 @@ body {
   @include font-oxygen;
 }
 
-p {
-  margin-bottom: 20px;
-}
-
 a {
 	text-decoration: none;
 }
@@ -37,6 +33,18 @@ a img {
 
 figure {
   display: block;
+}
+
+p,
+li {
+  margin-bottom: em(20px);
+  @include font-size-medium;
+}
+
+ol,
+ul {
+  margin: 1em 0;
+  padding: 0 0 0 40px;
 }
 
 

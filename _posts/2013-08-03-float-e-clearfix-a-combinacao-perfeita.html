@@ -6,4 +6,28 @@ categories: css
 image: http://i.imgur.com/K6VNqgB.png
 ---
 
-<p>Está ai uma pergunta que não quer calar, as famosas Cascading Style Sheets ou melhor CSS são divertidos ou irritantes? Legais ou costumam te deixar frustado?  Todo desenvolvedor das famosas CSS, tem um sentimento de amor e ódio. Mas garanto que CSS pode ser algo bem divertido se soubermos exatamente para que serve cada atributo e como aplica-los. Por isso resolvi escrever sobre alguns problemas comuns que todos nós, repito TODOS nós passamos no dia a dia, que se não for bem aplicado pode transformar nossa vida em um inferno bem estiloso como por exemplo Clear e Float, espaçamento com inline-block, como funciona o position absolute, porque não conseguimos usar uma altura com 100%, como usar o z-index e porque raios as margem se fundem.</p>
+<p>Float, quem nunca usou e teve problema com esta propriedade? Problemas com float é algo comum para quem desenvolve layouts com mais de uma coluna.</p>
+<p>O problema basicamente é quando temos em nosso layout alguns elementos flutuantes que apesar de bem posicionados acabam saindo fora do fluxo normal do documento e tendo um comportamento totalmente diferente do que esperamos e como resultado, temos um layout totalmente bagunçado. Mas,não se despere, tenho uma resposta e uma solução para você.</p>
+<p>Infelizmente este problema acontece porque o pai do elemento que tem a propriedade <code class="article__code">float</code>, não consegue calcular sua altura automaticamente e com isso ajustar o elemento flutuante em seu fluxo normal.</p>
+<p>Existem várias formas de resolver esse problema, mas a forma mais simples é usar um class chamado <code class="article__code">.clearfix</code>, veja só:</p>
+
+{% highlight ruby linenos %}
+.clearfix:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+{% endhighlight %}
+
+<p>Nesse código usamos o <code class="article__code">pseudo-class :after</code>, isso significa que queremos que algo aconteça depois do elemento que tenha o class <code class="article__code">.clearfix</code>.</p>
+<p>No class <code class="article__code">.clearfix</code> temos alguns atributos que fazem toda diferença veja só:</p>
+<ul>
+	<li>O uso do <code class="article__code">content: "";</code> faz com que seja criado um conteúdo vazio após o elemento. Lembrando que dentro desse atributo pode conter textos.</li>
+	<li>Temos também um atributo <code class="article__code">display: table;</code> que cria célula de uma tabela anônima sem precisar de todas as tags que normalmente uma tabela usa.</li>
+	<li>Os atributos <code class="article__code">content: "";</code> e <code class="article__code">display: table;</code> juntos, fazem com que se crie um novo bloco no fluxo do documento, impedindo o colapso das margens.</li>
+	<li>E por ultimo e muito importante <code class="article__code">clear:both;</code>, este atributo provoca uma quebra no <code class="article__code">float</code> fazendo com que o elemento não sofra influência alguma de nenhum objeto com <code class="article__code">float:left;</code> ou <code class="article__code">float:right;</code>.</li>
+</ul>
+
+<p>E se sua preocupação é se este método é suportado pelos navegadores, fique tranquilo pois é totalmentez suportado do IE 8+.</p>
+<p>Resumindo, o que você provavelmente deve fazer é criar um class em seu projeto chamada <code class="article__code">.clearfix</code> (ou o nome de sua preferência) e aplicar aos seus elementos. Esta é a maneira mais simples e mais limpa para lidar com seus elementos com <code class="article__code">float</code>.</p>
+<p>Qualquer dúvida deixe um comentário, espero ter ajudado ;)</p>
