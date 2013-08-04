@@ -1,58 +1,54 @@
-.container {
-	width: 100%;
-	max-width: 1000px;
-	margin: 0 auto;
-}
-
 /* ==========================================================================
    Header
    ========================================================================== */
 
 .header {
 	border-bottom: 2px solid #CCC;
-	padding: em(10px) em(10px) 0; 
 	background-color: #FFF;
 }
 
-.logo {
+.logo__image {
 	display: inline-block;
 	width: em(28px);
 	vertical-align: top;
 }
 
-.nameLogo {
+.logo__name {
 	display: inline-block;
-	margin: em(5px) 0 em(10px) em(10px);
-	width: 250px;
-	font-size: em(24px);
-	color: $smoothColor;
+	margin: 0 0 0 em(10px);
+	width: 200px;
+	font-size: em(19px);
 	@include transition(all, 0.3s, ease-in-out);
 }
 
-.navbar {
-
+.logo__name .logo__link:hover {
+	opacity:0.6;
+	filter:alpha(opacity=60);
 }
 
-.navbar ul {
-	
+.logo__link {
+	color: $bodyColor;
+	@include transition(all, 0.5s, linear);
 }
 
-.navbar ul li {
-	
+.logo__link:hover {
+	text-decoration: none;
 }
 
-.navbar ul li a {
-	
+.logo__link:hover .logo__image {
+	margin-top: em(5px);
+	@include transition(all, 0.5s, linear);
 }
+
 
 @media screen and (min-width:630px) {
-	.nameLogo {
+	.logo__name {
 		font-size: em(28px);
 	}
 }
 
 @media screen and (min-width:800px) {
-	.logo {
+	.logo__image {
 		width: em(43px);
 		@include transition(all, 0.3s, ease-in-out)
 	}
@@ -75,7 +71,133 @@
 	padding: em(10px);
 }
 
+/* ==========================================================================
+   Article
+   ========================================================================== */
+
+.article-post {
+	margin: 0 auto;
+	padding: em(10px);
+	width: 100%;
+	max-width: 770px;
+	line-height: em(25px);
+}
+
+.article-list {
+	width: 100%;
+	max-width: 780px;
+	margin: 0 auto;
+}
+
+.article-list__item {
+	margin: 30px 0;
+	@include border-radius(6px);
+	padding: em(15px);
+	background-color: #FFF;
+}
+
+.article-list__item:hover {
+	background-color: #3BC492;
+	@include transition(all, 0.2s, linear);
+}
+
+.article-list__item:hover .article-list__title a,
+.article-list__item:hover .article-list__content {
+	color: #FFF;
+}
+
+.article-list__image {
+	width: 100%;
+	padding: em(10px);
+	background-color: #3BC492;
+}
+
+.article-list__image img {
+	width: 100%;
+}
+
+.article-list__title {
+	@include font-size-large;
+}
+
+.article-list__title a {
+	color: $bodyColor;
+}
+
+@media screen and (min-width:550px) {
+	.article-list__item {
+		padding: em(20px);
+	}
+
+	.article-list__image {
+		display: inline-block;
+		width: 55%;
+	}
+	
+	.article-list__content {
+		display: inline-block;
+		width: 45%;
+		padding: em(20px);
+		padding-top: 0;
+		vertical-align: top;
+	}
+
+	.article-list__title {
+		margin-top: 0;
+	}
+}
+
+/* ==========================================================================
+   Titles
+   ========================================================================== */
+
+.title--big {
+	margin: em(30px) auto;
+	width: 100%;
+	max-width: 1000px;
+	color: #666;
+	text-align: center;
+}
+
+/* ==========================================================================
+   Images
+   ========================================================================== */
+
+.image__container {
+	margin: em(30px) auto;
+	width: 100%;
+	background-color: #3BC492;
+}
+
+.image__post {
+	margin: 0 auto;
+	max-width: 1000px;
+	padding: em(10px);
+	text-align: center;
+}
+
+.image__post img {
+	margin: em(30px) 0;
+	@include transition(all, 0.3s, ease-in);
+}
+
+.image__descr {
+	font-size: em(12px);
+	@include font-anonymous;
+	margin-bottom: em(10px);
+}
+
+@media screen and (max-width: 630px) {
+	.image__post img {
+		width: 100%;
+	}
+}
 
 /* ==========================================================================
    Footer
    ========================================================================== */
+	
+.footer {
+	background-color: #3BC492;
+	min-height: em(30px);
+}
