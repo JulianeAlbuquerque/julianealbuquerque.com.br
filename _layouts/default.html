@@ -5,8 +5,7 @@
 
     {% include metatags.html %}
     {% include stylesheets.html %}
-
-    <link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+    {% include fontes.html %}
 
     <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Juliane Albuquerque">
     
@@ -18,33 +17,10 @@
   <body>
     
     {% include header.html %}
-      
-      <div class="container">
-        <div class="site">
-          <div class="header">
-            <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-            <a class="extra" href="/">home</a>
-          </div>
 
-              {{ content }}
-
-          <div class="footer">
-            <div class="contact">
-              <p>
-                Your Name<br />
-                What You Are<br />
-                your@email.com
-              </p>
-            </div>
-            <div class="contact">
-              <p>
-                <a href="http://github.com/yourusername/">github.com/yourusername</a><br />
-                <a href="http://twitter.com/yourusername/">twitter.com/yourusername</a><br />
-              </p>
-            </div>
-          </div>
-        </div>
-      </div> <!-- /container -->
+    <main class="main" role="main">
+      {{ content }}
+    </main>
 
   </body>
 </html>

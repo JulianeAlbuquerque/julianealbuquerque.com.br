@@ -1,14 +1,10 @@
-@mixin border-radius($radius) {
-	-webkit-border-radius: $radius;
-	 -khtml-border-radius: $radius;
- 	 	 -moz-border-radius: $radius;
-					border-radius: $radius;
+// FONTES
+@mixin font-oxygen {
+	font-family: 'Oxygen', sans-serif, arial;
 }
 
-@mixin box-shadow($color, $hoffset, $voffset, $blur) {
-  -webkit-box-shadow: $color $hoffset $voffset $blur;
-  	 -moz-box-shadow: $color $hoffset $voffset $blur;
-  				box-shadow: $color $hoffset $voffset $blur;
+@mixin font-anonymous {
+	font-family: 'Anonymous Pro', sans-serif;
 }
 
 @mixin font-size-mini {
@@ -31,15 +27,26 @@
 	font-size: $fontSizeXLarge;
 }
 
+// CSS
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	 -khtml-border-radius: $radius;
+ 	 	 -moz-border-radius: $radius;
+					border-radius: $radius;
+}
+
+@mixin box-shadow($color, $hoffset, $voffset, $blur) {
+  -webkit-box-shadow: $color $hoffset $voffset $blur;
+  	 -moz-box-shadow: $color $hoffset $voffset $blur;
+  				box-shadow: $color $hoffset $voffset $blur;
+}
+
+
 // transition
-@mixin transition($property, $duration, $ms: false) {
-	-webkit-transition: $property $duration ease-in-out;
-		 -moz-transition: $property $duration ease-in-out;
-			 -o-transition: $property $duration ease-in-out;
-	@if ($ms) {
-		-ms-transition: $property $duration ease-in-out;
-	}
-	transition: $property $duration ease-in-out;
+@mixin transition($property, $duration, $ms) {
+	-webkit-transition: $property $duration $ms;
+		 -moz-transition: $property $duration $ms;
+			 -o-transition: $property $duration $ms;
 }
 
 // returns unitless number

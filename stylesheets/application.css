@@ -1,1 +1,151 @@
-*,*:after,*:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;padding:0;margin:0}html,body{background-color:#F8F8F8;font-family:'Oxygen', sans-serif, arial}a{text-decoration:none}a:hover{text-decoration:underline}h1{font-size:2em;margin:0.67em 0}h2{font-size:1.5em;margin:0.83em 0}h3{font-size:1.17em;margin:1em 0}h4{font-size:1em;margin:1.33em 0}h5{font-size:0.83em;margin:1.67em 0}h6{font-size:0.67em;margin:2.33em 0}.container{width:100%;max-width:1000px;margin:0 auto}.header{border-bottom:2px solid #CCC;min-height:6.25em;padding:0.625em 0.625em 0;background-color:#FFF}.logo{display:inline-block;width:1.75em;vertical-align:top}.nameLogo{display:inline-block;margin-left:10px;width:250px;font-size:1.5em;color:#ccc;-webkit-transition:all 0.3s ease-in-out;-moz-transition:all 0.3s ease-in-out;-o-transition:all 0.3s ease-in-out;-ms-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out}@media screen and (min-width: 550px){.nameLogo{margin-top:9px;width:300px;font-size:2em}}@media screen and (min-width: 800px){.nameLogo{font-size:2.5em}.logo{width:2.6875em;-webkit-transition:all 0.3s ease-in-out;-moz-transition:all 0.3s ease-in-out;-o-transition:all 0.3s ease-in-out;-ms-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out}}@media screen and (max-width: 1000px){.header{padding:0.625em 0.5em 0}}
+@charset "UTF-8";
+/*
+ Colors
+*/
+/*
+ Padrão de fontes
+*/
+/* ==========================================================================
+   Base
+   ========================================================================== */
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
+
+html,
+body {
+  background-color: #F8F8F8;
+  color: #999999;
+  font-family: 'Oxygen', sans-serif, arial; }
+
+p {
+  margin-bottom: 20px; }
+
+a {
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: underline; }
+
+/* ==========================================================================
+   Fontes
+   ========================================================================== */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0; }
+
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0; }
+
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0; }
+
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0; }
+
+h6 {
+  font-size: 0.67em;
+  margin: 2.33em 0; }
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto; }
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+.header {
+  border-bottom: 2px solid #CCC;
+  padding: 0.625em 0.625em 0;
+  background-color: #FFF; }
+
+.logo {
+  display: inline-block;
+  width: 1.75em;
+  vertical-align: top; }
+
+.nameLogo {
+  display: inline-block;
+  margin: 0.3125em 0 0.625em 0.625em;
+  width: 250px;
+  font-size: 1.5em;
+  color: #cccccc;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out; }
+
+@media screen and (min-width: 630px) {
+  .nameLogo {
+    font-size: 1.75em; } }
+@media screen and (min-width: 800px) {
+  .logo {
+    width: 2.6875em;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out; } }
+@media screen and (max-width: 1000px) {
+  .header {
+    padding: 0.625em 0.5em 0; } }
+/* ==========================================================================
+   Main
+   ========================================================================== */
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0.625em; }
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+/* ==========================================================================
+   Titles
+   ========================================================================== */
+.title--big {
+  margin: 1.875em auto;
+  width: 100%;
+  max-width: 1000px;
+  color: #666;
+  text-align: center; }
+
+/* ==========================================================================
+   Images
+   ========================================================================== */
+.image__container {
+  margin: 1.875em auto;
+  width: 100%;
+  background-color: #3BC492; }
+
+.image__post {
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 0.625em;
+  text-align: center; }
+
+.image__post img {
+  margin: 1.875em 0;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in; }
+
+.image__descr {
+  font-size: 0.75em;
+  font-family: 'Anonymous Pro', sans-serif;
+  margin-bottom: 20px; }
+
+@media screen and (max-width: 630px) {
+  .image__post img {
+    width: 100%; } }

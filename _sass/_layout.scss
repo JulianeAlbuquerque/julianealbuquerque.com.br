@@ -10,7 +10,6 @@
 
 .header {
 	border-bottom: 2px solid #CCC;
-	min-height: em(100px);
 	padding: em(10px) em(10px) 0; 
 	background-color: #FFF;
 }
@@ -23,11 +22,11 @@
 
 .nameLogo {
 	display: inline-block;
-	margin-left: 10px;
+	margin: em(5px) 0 em(10px) em(10px);
 	width: 250px;
 	font-size: em(24px);
 	color: $smoothColor;
-	@include transition(all, 0.3s, ease-in-out)
+	@include transition(all, 0.3s, ease-in-out);
 }
 
 .navbar {
@@ -46,19 +45,13 @@
 	
 }
 
-@media screen and (min-width:550px) {
+@media screen and (min-width:630px) {
 	.nameLogo {
-		margin-top: 9px;
-		width: 300px;
-		font-size: em(32px);
+		font-size: em(28px);
 	}
 }
 
 @media screen and (min-width:800px) {
-	.nameLogo {
-		font-size: em(40px);
-	}
-
 	.logo {
 		width: em(43px);
 		@include transition(all, 0.3s, ease-in-out)
@@ -70,6 +63,18 @@
 		padding: em(10px) em(8px) 0;
 	}
 }
+
+/* ==========================================================================
+   Main
+   ========================================================================== */
+
+.container {
+	width: 100%;
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: em(10px);
+}
+
 
 /* ==========================================================================
    Footer
