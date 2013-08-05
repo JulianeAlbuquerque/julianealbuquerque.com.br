@@ -1,5 +1,6 @@
 name: Juliane Albuquerque
 author: https://plus.google.com/106816029032156931516
+description: "Se você procura conteúdo sobre html5, css3, javascript, ux, ui e design, pode ter certeza que está no lugar certp."
 timezone: America/Sao_Paulo
 
 exclude: ["README.md", "Makefile", ".gitignore"]
