@@ -9,17 +9,26 @@
 <link rel="apple-touch-icon-precomposed" href="{{ site.baseurl}}favicon.png">
 <link rel="author" href="https://plus.google.com/106816029032156931516">
 <link rel="publisher" href="https://plus.google.com/106816029032156931516">
-
-<meta name="description" content="{{ page.description | escape }}">
+<meta name="description" content="{{ page.description }}">
 <link rel="canonical" href="{{ site.url }}{{ page.url }}/">
-
-<meta name="robots" content="index, follow">
 <meta name="google-site-verification" content="DbqFaKdTODtuJcNLO3ER-nDNZtgz-m3-k8NC0fO3D0M" />
+<meta name="robots" content="index, follow">
 
 <meta property="og:locale" content="pt_BR">
-<meta property="og:type" content="website">
-<meta property="og:title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}">
+<meta property="og:title" content="{% if page.title %}{{ page.title }} {% endif %}{{ site.title }}">
+<meta property="og:type" content="article">
 <meta property="og:url" content="{{ site.url }}{{ page.url }}">
 <meta property="og:site_name" content="Juliane Albuquerque">
-<meta property="og:description" content="{{ page.description | escape }}">
+<meta property="og:description" content="{{ page.description }}">
 <meta property="og:image" content="{{ page.image }}">
+<meta property="article:section" content="blog">
+<meta property="article:tag"   content="tecnologia">
+<meta property="article:tag"   content="Juliane Albuquerque">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@Juliane_Albq">
+<meta name="twitter:creator" content="@Juliane_Albq">
+<meta name="twitter:title" content="{{ page.title }}">
+<meta name="twitter:description" content="{{ page.image }}">
+<meta name="twitter:image" content="{{ page.description }}">
+<meta name="twitter:domain" content="http://julianealbuquerque.com.br">
