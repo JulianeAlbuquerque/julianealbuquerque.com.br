@@ -1,0 +1,19 @@
+{
+  "name": "julianealbuquerque.combr",
+  "version": "0.1.1",
+  "description": "Este é um blog pessoal que fala sobre tecnologia e dia-a-dia de um UX e Front-end",
+  "homepage": "https://julianealbuquerque.com.br",
+  "author": {
+    "name": "Juliane Albuquerque",
+    "url": "http://about.me/julianealbq"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/JulianeAlbuquerque/julianealbuquerque.com.br"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-sass": "~0.4.1",
+    "grunt-contrib-watch": "~0.5.2"
+  }
+}
