@@ -7,11 +7,11 @@ Este site é feito em [Jekyll](http:/jekyllrb.com/), que é um static generator 
 
 ##Primeiros passos
 
-Instale o [Git](http://git-scm.com/downloads) e o [Ruby](http://www.ruby-lang.org/pt/downloads/), caso você não os tenha ainda.
+Instale o [Git](http://git-scm.com/downloads) e o [Ruby](http://www.ruby-lang.org/pt/downloads/), caso você não use mac.
 
 Uma vez tendo instalado essas dependências, abra o terminal e instale o [Jekyll](http://jekyllrb.com/) através do comando:
 
-	gem install jekyll
+	sudo gem install jekyll
 
 Agora clone o projeto:
 
@@ -19,10 +19,10 @@ Agora clone o projeto:
 
 Depois vá para pasta do projeto:
 
-	cd julianealbuquerque.com.br
+	cd julianealbuquerque.com
 
 E finalmente rode:
 
-	jekyll
+	jekyll serve
 
 Agora você irá ver o site rodando em `localhost:4000` :D 
