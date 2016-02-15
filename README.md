@@ -1,4 +1,4 @@
-#julianealbuquerque.com.br
+#julianealbuquerque.com
 
 Este é o meu site [Juliane Albuquerque](https://github.com/JulianeAlbuquerque)
 
@@ -19,7 +19,7 @@ Agora clone o projeto:
 
 Depois vá para pasta do projeto:
 
-	cd julianealbuquerque.com.br
+	cd julianealbuquerque.com
 
 E finalmente rode:
 
