@@ -16,4 +16,4 @@ Instale as dependências
 
     npm install
 
-Agora você irá ver o site rodando em `localhost:4000` :D 
+Agora você irá ver o site rodando em `localhost:3000` :D 
