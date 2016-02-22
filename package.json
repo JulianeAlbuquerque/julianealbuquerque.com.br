@@ -1,19 +1,38 @@
 {
-  "name": "julianealbuquerque.combr",
-  "version": "0.1.1",
-  "description": "Este é um blog pessoal que fala sobre tecnologia e dia-a-dia de um UX e Front-end",
-  "homepage": "https://julianealbuquerque.com.br",
-  "author": {
-    "name": "Juliane Albuquerque",
-    "url": "http://about.me/julianealbq"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/JulianeAlbuquerque/julianealbuquerque.com.br"
-  },
+  "name": "julianealbuquerque.com.br",
+  "version": "2.0.0",
+  "description": "Este é o meu site [Juliane Albuquerque](https://github.com/JulianeAlbuquerque)",
+  "main": "my-engine.js",
+  "author": "Juliane Albuquerque <juliane.albq@gmail.com>",
+  "license": "MIT",
   "devDependencies": {
-    "grunt": "~0.4.5",
-    "grunt-contrib-sass": "~0.4.1",
-    "grunt-contrib-watch": "~0.5.2"
+    "autoprefixer": "^6.3.3",
+    "browser-sync": "^2.11.1",
+    "i": "^0.3.4",
+    "imagemin-cli": "^2.1.0",
+    "node-sass": "^3.4.2",
+    "onchange": "^2.0.0",
+    "parallelshell": "^2.0.0",
+    "postcss-cli": "^2.5.1",
+    "svg-sprite-generator": "0.0.7",
+    "svgo": "^0.6.1"
+  },
+  "scripts": {
+    "scss": "node-sass --output-style compressed -o dist/css src/scss",
+    "autoprefixer": "postcss -u autoprefixer -r dist/css/*",
+    
+    "imagemin": "imagemin src/images dist/images -p",
+    "icons": "svgo -f src/images/icons; mkdir -p dist/images && svg-sprite-generate -d src/images/icons -o dist/images/icons.svg",
+    
+    "serve": "browser-sync start --server --files 'dist/css/*.css'",
+    
+    "build:css": "npm run scss && npm run autoprefixer",
+    "build:images": "npm run imagemin && npm run icons",
+    "build:all": "npm run build:css && npm run build:images",
+
+    "watch:css": "onchange 'src/scss/*.scss' -- npm run build:css",
+    "watch:all": "parallelshell 'npm run serve' 'npm run watch:css'",
+
+    "postinstall": "npm run watch:all"
   }
 }

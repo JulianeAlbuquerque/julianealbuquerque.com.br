@@ -26,3 +26,24 @@ E finalmente rode:
 	jekyll serve
 
 Agora você irá ver o site rodando em `localhost:4000` :D 
+
+## Deve Ter
+* Jekyll
+* Gulp
+* Sass
+
+=====
+
+##Primeiros passos
+
+Clone o projeto
+    https://github.com/JulianeAlbuquerque/julianealbuquerque.com.br.git
+
+Vá para a pasta do projeto:
+    cd julianealbuquerque.com.br
+
+Instale as dependências
+    npm install
+
+Rode o projeto
+    npm run 
