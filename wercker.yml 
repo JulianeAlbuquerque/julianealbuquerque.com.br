@@ -9,3 +9,9 @@ build:
             code: |
             echo "node version $(node -v) running"
             echo "npm version $(npm -v) running"
+deploy:
+    steps:
+        - lukevivier/gh-pages:
+            token: $GH_TOKEN
+            basedir: dist
+            domain: julianealbuquerque.com
