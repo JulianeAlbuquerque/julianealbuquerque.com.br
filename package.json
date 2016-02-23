@@ -20,7 +20,7 @@
   },
   "gh-pages-deploy": {
     "prep": [
-      "build:all"
+      "deploy:build"
     ]
   },
   "scripts": {
@@ -28,13 +28,23 @@
     "autoprefixer": "postcss -u autoprefixer -r dist/css/*",
     "imagemin": "imagemin src/images dist/images -p",
     "icons": "svgo -f src/images/icons; mkdir -p dist/images && svg-sprite-generate -d src/images/icons -o dist/images/icons.svg",
+    
     "serve": "browser-sync start --server --files 'dist/css/*.css'",
+    
     "build:css": "npm run scss && npm run autoprefixer",
     "build:images": "npm run imagemin && npm run icons",
     "build:all": "npm run build:css && npm run build:images",
+    
     "watch:css": "onchange 'src/scss/*.scss' -- npm run build:css",
     "watch:all": "parallelshell 'npm run serve' 'npm run watch:css'",
     "postinstall": "npm run build:all",
+
+    "deploy-scss": "node-sass --output-style compressed -o build/css src/scss",
+    "deploy-autoprefixer": "postcss -u autoprefixer -r build/css/*",
+    "deploy:css": "npm run deploy-scss && npm run deploy-autoprefixer",
+    "deploy-imagemin": "imagemin src/images build/images -p",
+    "deploy:images": "npm run deploy-imagemin",
+    "deploy:build": "npm run deploy-imagemin && npm run deploy:css",
 
     "deploy": "gh-pages-deploy"
   }
