@@ -18,6 +18,11 @@
     "svg-sprite-generator": "0.0.7",
     "svgo": "^0.6.1"
   },
+  "gh-pages-deploy": {
+    "prep": [
+      "build:all"
+    ]
+  },
   "scripts": {
     "scss": "node-sass --output-style compressed -o dist/css src/scss",
     "autoprefixer": "postcss -u autoprefixer -r dist/css/*",
