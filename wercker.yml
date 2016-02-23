@@ -4,12 +4,12 @@ build:
   steps:
     - npm-install
     - script:
-      name: build
-      code: npm run build
+        name: build
+        code: npm run build
 
 deploy:
   steps:
     - gh-pages:
-      token: $GH_TOKEN
-      domain: julianealbuquerque.com.br
-      basedir: /dist
+        token: $GH_TOKEN
+        domain: julianealbuquerque.com.br
+        basedir: /dist
