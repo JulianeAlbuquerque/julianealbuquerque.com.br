@@ -8,7 +8,6 @@
   "devDependencies": {
     "autoprefixer": "^6.3.3",
     "browser-sync": "^2.11.1",
-    "gh-pages-travis": "^1.0.0",
     "i": "^0.3.4",
     "imagemin-cli": "^2.1.0",
     "node-sass": "^3.4.2",
@@ -30,7 +29,5 @@
     "watch:css": "onchange 'src/scss/*.scss' -- npm run build:css",
     "watch:all": "parallelshell 'npm run serve' 'npm run watch:css'",
     "postinstall": "npm run build:all",
-
-    "gh-pages-travis": "gh-pages-travis"
   }
 }
