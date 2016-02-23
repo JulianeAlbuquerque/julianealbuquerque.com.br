@@ -33,7 +33,7 @@
     "watch:css": "onchange 'src/scss/*.scss' -- npm run build:css",
     "watch:all": "parallelshell 'npm run serve' 'npm run watch:css'",
 
-    "postinstall": "npm run watch:all",
+    "postinstall": "npm run build:all",
 
     "deploy": "./deploy-ghpages.sh"
   }
