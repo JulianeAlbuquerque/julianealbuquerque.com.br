@@ -8,6 +8,7 @@
   "devDependencies": {
     "autoprefixer": "^6.3.3",
     "browser-sync": "^2.11.1",
+    "gh-pages-travis": "^1.0.0",
     "i": "^0.3.4",
     "imagemin-cli": "^2.1.0",
     "node-sass": "^3.4.2",
@@ -20,19 +21,14 @@
   "scripts": {
     "scss": "node-sass --output-style compressed -o dist/css src/scss",
     "autoprefixer": "postcss -u autoprefixer -r dist/css/*",
-    
     "imagemin": "imagemin src/images dist/images -p",
     "icons": "svgo -f src/images/icons; mkdir -p dist/images && svg-sprite-generate -d src/images/icons -o dist/images/icons.svg",
-    
     "serve": "browser-sync start --server --files 'dist/css/*.css'",
-    
     "build:css": "npm run scss && npm run autoprefixer",
     "build:images": "npm run imagemin && npm run icons",
     "build:all": "npm run build:css && npm run build:images",
-
     "watch:css": "onchange 'src/scss/*.scss' -- npm run build:css",
     "watch:all": "parallelshell 'npm run serve' 'npm run watch:css'",
-
     "postinstall": "npm run build:all"
   }
 }
