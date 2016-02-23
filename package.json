@@ -28,6 +28,6 @@
     "build:all": "npm run build:css && npm run build:images",
     "watch:css": "onchange 'src/scss/*.scss' -- npm run build:css",
     "watch:all": "parallelshell 'npm run serve' 'npm run watch:css'",
-    "postinstall": "npm run build:all",
+    "postinstall": "npm run build:all"
   }
 }
