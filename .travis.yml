@@ -1,0 +1,9 @@
+language: node_js
+node_js:
+- '0.10'
+script: npm run-script deploy
+env:
+ global:
+ - GH_REF: https://github.com/JulianeAlbuquerque/julianealbuquerque.com.br.git
+ - secure: 8290b3392e5ecccca05c9847424ca891d1c31a6a
+ 
