@@ -1,8 +1,11 @@
-box: node
+box: wercker/nodejs
 
 build:
   steps:
     - npm-install
+    - script:
+        name: build
+        code: npm run build
 
 deploy:
   steps:
