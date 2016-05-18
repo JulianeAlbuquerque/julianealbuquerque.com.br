@@ -1,20 +1,22 @@
-#julianealbuquerque.com.br
+![logo](logo.png)
 
-Este é o meu site [Juliane Albuquerque](https://github.com/JulianeAlbuquerque)
+# julianealbuquerque.com.br
 
-##Primeiros passos
+This is my web site [Juliane Albuquerque](https://github.com/JulianeAlbuquerque)
 
-Clone o projeto
+## Installation
 
-    https://github.com/JulianeAlbuquerque/julianealbuquerque.com.br.git
+1. Clone project `https://github.com/JulianeAlbuquerque/julianealbuquerque.com.br.git`
+2. Enter the directory: `cd julianealbuquerque.com.br`
+3. Install dependencies: `npm install`
+4. Run project `npm run watch`
+5. Access in your browser `localhost:3000`
 
-Vá para a pasta do projeto:
+## Deploy
 
-    cd julianealbuquerque.com.br
+1. In the _master_ branch run `npm run deploy`
 
-Instale as dependências
 
-    npm install
+---
 
-Agora você irá ver o site rodando em `localhost:3000`
-
+Made with :heart: by [Juliane Albuquerque](http://julianealbuquerque.com.br/)
