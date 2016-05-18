@@ -1,51 +1,35 @@
 {
-  "name": "julianealbuquerque.com.br",
-  "version": "2.0.0",
-  "description": "Este é o meu site [Juliane Albuquerque](https://github.com/JulianeAlbuquerque)",
-  "main": "my-engine.js",
-  "author": "Juliane Albuquerque <juliane.albq@gmail.com>",
-  "license": "MIT",
-  "devDependencies": {
-    "autoprefixer": "^6.3.3",
-    "browser-sync": "^2.11.1",
-    "gh-pages-deploy": "^0.4.0",
-    "i": "^0.3.4",
-    "imagemin-cli": "^2.1.0",
-    "node-sass": "^3.4.2",
-    "onchange": "^2.0.0",
-    "parallelshell": "^2.0.0",
-    "postcss-cli": "^2.5.1",
-    "svg-sprite-generator": "0.0.7",
-    "svgo": "^0.6.1"
-  },
-  "gh-pages-deploy": {
-    "prep": [
-      "deploy:build"
-    ]
-  },
-  "scripts": {
-    "scss": "node-sass --output-style compressed -o dist/css src/scss",
-    "autoprefixer": "postcss -u autoprefixer -r dist/css/*",
-    "imagemin": "imagemin src/images dist/images -p",
-    "icons": "svgo -f src/images/icons; mkdir -p dist/images && svg-sprite-generate -d src/images/icons -o dist/images/icons.svg",
-    
-    "serve": "browser-sync start --server --files 'dist/css/*.css'",
-    
-    "build:css": "npm run scss && npm run autoprefixer",
-    "build:images": "npm run imagemin && npm run icons",
-    "build:all": "npm run build:css && npm run build:images",
-    
-    "watch:css": "onchange 'src/scss/*.scss' -- npm run build:css",
-    "watch:all": "parallelshell 'npm run serve' 'npm run watch:css'",
-    "postinstall": "npm run build:all",
+    "name": "julianealbuquerque.com.br",
+    "version": "1.0.0",
+    "description": "Este é o meu site [Juliane Albuquerque](https://github.com/JulianeAlbuquerque)",
+    "main": "index.html",
+    "author": "Juliane Albuquerque <juliane.albq@gmail.com>",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/JulianeAlbuquerque/julianealbuquerque.com.br.git"
+    },
+    "devDependencies": {
+        "gh-pages-deploy": "^0.4.0",
+        "imagemin-cli": "^2.1.0",
+        "node-sass": "^3.4.2",
+        "onchange": "^2.0.0",
+        "parallelshell": "^2.0.0"
+    },
+    "gh-pages-deploy": {
+        "prep": [
+            "deploy:build"
+        ]
+    },
+    "scripts": {
+        "scss": "node-sass --output-style compressed -o dist/css src/scss",
+        "imagemin": "imagemin src/images dist/images -p",
 
-    "deploy-scss": "node-sass --output-style compressed -o build/css src/scss",
-    "deploy-autoprefixer": "postcss -u autoprefixer -r build/css/*",
-    "deploy:css": "npm run deploy-scss && npm run deploy-autoprefixer",
-    "deploy-imagemin": "imagemin src/images build/images -p",
-    "deploy:images": "npm run deploy-imagemin",
-    "deploy:build": "npm run deploy-imagemin && npm run deploy:css",
+        "build": "npm run scss && npm run imagemin",
 
-    "deploy": "gh-pages-deploy"
-  }
+        "watch:css": "onchange 'src/scss/*.scss' -- npm run scss",
+        "watch:all": "parallelshell 'npm run watch:css'",
+
+        "deploy": "gh-pages -d dist"
+    }
 }
