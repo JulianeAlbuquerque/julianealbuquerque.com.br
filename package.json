@@ -1,35 +1,38 @@
 {
-    "name": "julianealbuquerque.com.br",
-    "version": "1.0.0",
-    "description": "Este é o meu site [Juliane Albuquerque](https://github.com/JulianeAlbuquerque)",
-    "main": "index.html",
-    "author": "Juliane Albuquerque <juliane.albq@gmail.com>",
-    "license": "MIT",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/JulianeAlbuquerque/julianealbuquerque.com.br.git"
-    },
-    "devDependencies": {
-        "gh-pages-deploy": "^0.4.0",
-        "imagemin-cli": "^2.1.0",
-        "node-sass": "^3.4.2",
-        "onchange": "^2.0.0",
-        "parallelshell": "^2.0.0"
-    },
-    "gh-pages-deploy": {
-        "prep": [
-            "deploy:build"
-        ]
-    },
-    "scripts": {
-        "scss": "node-sass --output-style compressed -o dist/css src/scss",
-        "imagemin": "imagemin src/images dist/images -p",
+  "_comment": "https://github.com/meandavejustice/gh-pages-deploy",
+  "name": "julianealbuquerque.com.br",
+  "version": "1.0.0",
+  "description": "Este é o meu site [Juliane Albuquerque](https://github.com/JulianeAlbuquerque)",
+  "main": "index.html",
+  "author": "Juliane Albuquerque <juliane.albq@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JulianeAlbuquerque/julianealbuquerque.com.br.git"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.12.8",
+    "gh-pages-deploy": "^0.4.0",
+    "imagemin-cli": "^2.1.0",
+    "node-sass": "^3.4.2",
+    "onchange": "^2.0.0",
+    "parallelshell": "^2.0.0",
+    "uglifyjs": "^2.4.10"
+  },
+  "gh-pages-deploy": {
+    "prep": [
+      "deploy:build"
+    ]
+  },
+  "scripts": {
+    "scss": "node-sass --output-style compressed -o dist/css src/scss",
+    "imagemin": "imagemin src/images dist/images -p",
+    "js": "mkdir -p dist/js && uglifyjs src/js/*.js -m -c -o dist/js/main.min.js",
 
-        "build": "npm run scss && npm run imagemin",
-
-        "watch:css": "onchange 'src/scss/*.scss' -- npm run scss",
-        "watch:all": "parallelshell 'npm run watch:css'",
-
-        "deploy": "gh-pages -d dist"
-    }
+    "build": "npm run scss && npm run imagemin && npm run js",
+    "watch:css": "onchange 'src/scss/*.scss' -- npm run scss",
+    "watch:js": "onchange 'src/js/*.js' -- npm run build:js",
+    "serve": "browser-sync start --server --files 'dist/css/*.css , dis/js/*.js'",
+    "deploy": "gh-pages -d dist"
+  }
 }
