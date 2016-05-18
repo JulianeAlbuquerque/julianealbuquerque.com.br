@@ -45,6 +45,6 @@
     "watch:js": "onchange 'src/js/*.js' -- npm run js",
     "watch": "parallelshell 'npm run serve' 'npm run watch:css' 'npm run watch:js'",
 
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages-deploy"
   }
 }
