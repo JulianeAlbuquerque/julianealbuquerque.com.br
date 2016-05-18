@@ -30,7 +30,7 @@
 
     "watch:css": "onchange 'src/scss/*.scss' -- npm run scss",
     "watch:js": "onchange 'src/js/*.js' -- npm run js",
-    "watch": "parallelshell 'npm run serve' 'npm run watch:css' 'npm run watch:js'",
+    "watch": "parallelshell 'npm run build' 'npm run serve' 'npm run watch:css' 'npm run watch:js'",
 
     "deploy": "git reset --hard origin/master && git merge origin master && npm run build && echo 'julianealbuquerque.com.br' > CNAME && npm run clean-source && git add -A . && git commit -a -m 'gh-pages update' && git push origin gh-pages --force "
   }

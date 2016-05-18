@@ -1,5 +1,7 @@
 (function() {
-  var ele = document.documentElement(".years-old");
+    console.log("oi")
+
+  var ele = document.querySelector(".years-old");
       d = new Date();
       year = d.getFullYear();
       month = d.getMonth();
