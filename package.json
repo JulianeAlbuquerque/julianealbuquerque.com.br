@@ -30,9 +30,14 @@
     "js": "mkdir -p dist/js && uglifyjs src/js/*.js -m -c -o dist/js/main.min.js",
 
     "build": "npm run scss && npm run imagemin && npm run js",
-    "watch:css": "onchange 'src/scss/*.scss' -- npm run scss",
-    "watch:js": "onchange 'src/js/*.js' -- npm run build:js",
     "serve": "browser-sync start --server --files 'dist/css/*.css , dis/js/*.js'",
+
+    "watch:css": "onchange 'src/scss/*.scss' -- npm run scss",
+    "watch:js": "onchange 'src/js/*.js' -- npm run js",
+    "watch": "parallelshell 'npm run serve' 'npm run watch:css' 'npm run watch:js'",
+
+    "clear": "rm -Rf dist",
+
     "deploy": "gh-pages -d dist"
   }
 }

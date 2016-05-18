@@ -27,6 +27,12 @@ p {
   font-size: 17px;
   color: #626262;
 }
+.container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0.9375em;
+}
 .avatar {
   margin: 0 auto;
   width: 140px;
