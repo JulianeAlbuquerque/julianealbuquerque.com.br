@@ -1,4 +1,4 @@
-![logo](logo.png)
+![logo](LOGO.png)
 
 # julianealbuquerque.com.br
 
