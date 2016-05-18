@@ -32,6 +32,6 @@
     "watch:js": "onchange 'src/js/*.js' -- npm run js",
     "watch": "parallelshell 'npm run build' 'npm run serve' 'npm run watch:css' 'npm run watch:js'",
 
-    "deploy": "git checkout gh-pages && git reset --hard origin/master && git merge origin master && npm install && npm run build && echo 'julianealbuquerque.com.br' > CNAME && npm run clean-source && git add -A . && git commit -a -m 'gh-pages update' && git push origin gh-pages --force "
+    "deploy": "git checkout gh-pages && git reset --hard origin/master && git merge origin master && npm install && npm run build && echo 'julianealbuquerque.com.br' > CNAME && npm run clean-source && git add -A . && git commit -a -m 'gh-pages update' && git push origin gh-pages --force && git checkout master"
   }
 }
