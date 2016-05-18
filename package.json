@@ -1,5 +1,4 @@
 {
-  "_comment": "https://github.com/meandavejustice/gh-pages-deploy",
   "name": "julianealbuquerque.com.br",
   "version": "1.0.0",
   "description": "Este é o meu site [Juliane Albuquerque](https://github.com/JulianeAlbuquerque)",
@@ -12,27 +11,15 @@
   },
   "devDependencies": {
     "browser-sync": "^2.12.8",
-    "gh-pages-deploy": "^0.4.0",
     "imagemin-cli": "^2.1.0",
     "node-sass": "^3.4.2",
     "onchange": "^2.0.0",
     "parallelshell": "^2.0.0",
     "uglifyjs": "^2.4.10"
   },
-  "gh-pages-deploy": {
-    "staticpath": "dist",
-    "cname": "julianealbuquerque.com.br",
-    "prep": [
-      "build"
-    ],
-    "post": [
-      "clean-source"
-    ],
-    "noprompt": false
-  },
   "scripts": {
     "clear": "rm -Rf dist",
-    "clean-source": "README.md src package.json",
+    "clean-source": "rm -Rf README.md src package.json .gitignore .DS_Store node_modules/",
 
     "scss": "node-sass --output-style compressed -o dist/css src/scss",
     "imagemin": "imagemin src/images dist/images -p",
@@ -45,6 +32,6 @@
     "watch:js": "onchange 'src/js/*.js' -- npm run js",
     "watch": "parallelshell 'npm run serve' 'npm run watch:css' 'npm run watch:js'",
 
-    "deploy": "git reset --hard origin/master && git pull --rebase origin master && npm run build && echo 'julianealbuquerque.com.br' > CNAME && rm -Rf README.md src package.json .gitignore && git add -A . && git commit -a -m 'gh-pages update' && git push origin gh-pages --force "
+    "deploy": "git reset --hard origin/master && git merge origin master && npm run build && echo 'julianealbuquerque.com.br' > CNAME && npm run clean-source && git add -A . && git commit -a -m 'gh-pages update' && git push origin gh-pages --force "
   }
 }
