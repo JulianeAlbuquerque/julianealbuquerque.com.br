@@ -20,12 +20,19 @@
     "uglifyjs": "^2.4.10"
   },
   "gh-pages-deploy": {
+    "staticpath": "dist",
+    "cname": "julianealbuquerque.com.br",
     "prep": [
-      "deploy:build"
-    ]
+      "build"
+    ],
+    "post": [
+      "clean-source"
+    ],
+    "noprompt": false
   },
   "scripts": {
     "clear": "rm -Rf dist",
+    "clean-source": "README.md src package.json",
 
     "scss": "node-sass --output-style compressed -o dist/css src/scss",
     "imagemin": "imagemin src/images dist/images -p",
