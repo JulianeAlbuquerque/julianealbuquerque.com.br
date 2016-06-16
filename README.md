@@ -2,7 +2,7 @@
 
 # julianealbuquerque.com.br
 
-This is my web site [Juliane Albuquerque](https://github.com/JulianeAlbuquerque)
+This is my website [Juliane Albuquerque](https://github.com/JulianeAlbuquerque)
 
 ## Installation
 
@@ -15,7 +15,6 @@ This is my web site [Juliane Albuquerque](https://github.com/JulianeAlbuquerque)
 ## Deploy
 
 1. In the _master_ branch run `npm run deploy`
-
 
 ---
 
